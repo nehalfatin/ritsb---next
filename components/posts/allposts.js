@@ -29,6 +29,7 @@ export const List = () => {
                         postImage={Users.postimage}
                         viewCount={Users.Views}
                         reactCount={Users.ReactCount}
+                        readingTime={Users.ReadTime}
                         id={Users.id}
                     />
                 </div>

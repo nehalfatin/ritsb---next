@@ -4,7 +4,32 @@
   left: 25%;
   height: 100%;
 }
-
+.bg__image {
+  background-image: url("/Images/header_bg.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px);
+  -webkit-filter: blur(3px);
+}
+.bg__text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: fit-content;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
 .title a:hover,
 .title a:focus,
 .title a:active {

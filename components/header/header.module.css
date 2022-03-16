@@ -63,7 +63,9 @@
   cursor: default;
 }
 
-.rowcontainer2:active {
-  text-decoration: underline;
-  text-decoration-color: red;
+.activeTab .rowcontainer2 {
+  width: 70%;
+  height: 25px;
+  border-bottom: 2px solid rgb(255, 1, 1);
+  margin: 0 auto;
 }

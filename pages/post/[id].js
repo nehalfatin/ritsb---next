@@ -3,6 +3,8 @@ import {db } from '../../firebase'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../post/post.module.css'
 import Link from 'next/link'
+import Head from 'next/head'
+import Image from "next/image"
 
 export const getStaticPaths = async () => {
     const snapshot = await getDocs(collection(db,'Users'));
@@ -33,6 +35,11 @@ const Detail =({userProps}) => {
     const Data = JSON.parse(userProps)
 
     return(
+       <div>
+       <Head>
+           <title>{Data.Title}</title>
+           <link rel='icon' href='/favicon.webp'/>
+       </Head>
         <div className={styles.container}>
             <div className={styles.post__header}>
                 <Link href='/moment'>
@@ -43,7 +50,7 @@ const Detail =({userProps}) => {
             </div>
 
             <div className={styles2.posts__container}>
-                <img src={Data.postimage}/>
+                <Image src={Data.postimage} layout='responsive' width='100%' height='70%' objectFit='contain'/>
                 <div className={styles2.line}></div>
             </div>
 
@@ -51,6 +58,7 @@ const Detail =({userProps}) => {
             <h1>{Data.Title}</h1>
             <p>{Data.Subtitle}</p>
             </div>
+        </div>
         </div>
     )
 }

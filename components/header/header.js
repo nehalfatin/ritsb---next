@@ -22,8 +22,8 @@ export default function Header() {
         
         <div className={styles.icons__container}>
           <Link href='/moment'>   
+            <a className={router.pathname == '/moment' ? styles.activeTab: ''}>
             <div className={styles.boxcontainer}>
-            <a id="navigation" class='active'>
               <div className={styles.rowcontainer1}>
                 <div className={styles.image__bg}>
                   <Image src='/Images/orange_logo_bg.png' height={40} width={40}/>
@@ -31,12 +31,12 @@ export default function Header() {
                 <FaRegClock className={styles.iconcontainer}/>
               </div>
               <div className={styles.rowcontainer2}>Moment </div>
-              </a>
             </div>
-         
+            </a>
           </Link>
     
           <Link href='/myposts'>
+          <a className={router.pathname == '/myposts' ? styles.activeTab: ''}>
             <div className={styles.boxcontainer}>
               <div className={styles.rowcontainer1}>
                 <div className={styles.image__bg}>
@@ -46,9 +46,11 @@ export default function Header() {
               </div>
               <div className={styles.rowcontainer2}>My Post</div>
             </div>
+            </a>
           </Link>
 
           <Link href='/myvideos'>
+          <a className={router.pathname == '/myvideos' ? styles.activeTab: ''}>
             <div className={styles.boxcontainer}>
               <div className={styles.rowcontainer1}>
                 <div className={styles.image__bg}>
@@ -58,7 +60,9 @@ export default function Header() {
                 </div>
               <div className={styles.rowcontainer2}>My videos</div>
             </div>
+            </a>
           </Link>
+
         </div>
       </div>
     </div>

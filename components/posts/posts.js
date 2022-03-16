@@ -3,6 +3,7 @@ import {AiFillLike} from 'react-icons/ai'
 import {ImEye} from 'react-icons/im'
 import {FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Posts(props) {
     
@@ -25,7 +26,10 @@ export default function Posts(props) {
         <p className={styles.subtitle}>{props.subtitle}</p>
       </div>
 
-      <img className={styles.post__image} src={props.postImage}/>
+      <div className={styles.post__image}>
+        <Image src={props.postImage} layout='responsive' width='100%' height='60%' objectFit='contain'/>
+        <p className={styles.readTime}>{`Reading Time: ${props.readingTime}min`}</p>
+      </div>
       </a>
       </Link>
 
