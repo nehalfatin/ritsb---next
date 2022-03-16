@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react'
 import { db } from '../../firebase'
 import Posts from './posts'
 
-
 export const List = () => {
     
     const [Users, setName] = useState([])
@@ -26,6 +25,7 @@ export const List = () => {
                         title={Users.Title}
                         subtitle={Users.Subtitle}
                         timestamp={new Date(Users.timestamp?.toDate()).toLocaleDateString()}
+                        category={Users.Category}
                         postImage={Users.postimage}
                         viewCount={Users.Views}
                         reactCount={Users.ReactCount}

@@ -14,7 +14,7 @@ export default function Posts(props) {
         <img className={styles.profile__image} src={props.profileImage}/>
          <div className={styles.profile__texts}>
           <p className={styles.name}>{props.name}</p>
-          <p className={styles.timestamp}>{props.timestamp}</p>
+          <p className={styles.timestamp}>{`${props.timestamp} - Posted on ${props.category}`}</p>
        
         </div>
       </div>
