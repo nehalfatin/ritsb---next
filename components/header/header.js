@@ -30,7 +30,7 @@ export default function Header() {
                 </div>
                 <FaRegClock className={styles.iconcontainer}/>
               </div>
-              <div className={styles.rowcontainer2}>Moment </div>
+              <div className={styles.rowcontainer2}>Moment</div>
             </div>
             </a>
           </Link>
