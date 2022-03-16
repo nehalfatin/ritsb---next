@@ -1,0 +1,13 @@
+.headerbutton__container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+@media (max-width: 600px) {
+  .headerbutton__container {
+    width: 80%;
+    margin-top: 5%;
+  }
+}
