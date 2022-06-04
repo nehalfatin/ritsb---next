@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
     })
     return {
         paths,
-        fallback: false
+        fallback: 'blocking'
     }
 }
 
@@ -25,7 +25,8 @@ export const getStaticProps = async (context) => {
     const docSnap = await getDoc(docRef);
 
     return {
-        props: {userProps: JSON.stringify(docSnap.data())||null}
+        props: {userProps: JSON.stringify(docSnap.data())||null},
+        revalidate: 10,
     }
 }
 
@@ -50,7 +51,10 @@ const Detail =({userProps}) => {
             </div>
 
             <div className={styles2.posts__container}>
-                <Image src={Data.postimage} layout='responsive' width='100%' height='70%' objectFit='contain'/>
+
+                {Data.postimage && (
+                    <Image src={Data.postimage} layout='responsive' width='100%' height='70%' objectFit='contain'/>
+                )}
                 <div className={styles2.line}></div>
             </div>
 

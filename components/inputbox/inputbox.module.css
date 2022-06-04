@@ -1,0 +1,261 @@
+.input__container {
+  width: 99%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+  border-radius: 9px;
+  padding: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0px 8px 10px rgb(226, 226, 226);
+}
+
+.input__container input,
+.input__container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(212, 212, 212, 0.322);
+  border: 1px solid rgba(122, 122, 122, 0.267);
+  resize: vertical;
+  max-height: 300px;
+  color: rgb(99, 99, 99);
+  margin: 2px;
+}
+.input__container ::placeholder {
+  color: rgb(182, 182, 182);
+}
+.input__container input:focus,
+.input__container textarea:focus {
+  outline-style: ridge;
+  outline-color: rgba(255, 68, 0, 0.76);
+}
+.input__container button {
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 68, 0, 0.76);
+  background-color: transparent;
+  font-size: 25px;
+  padding: 4px 4px 4px 4px;
+  color: rgba(255, 68, 0, 0.76);
+}
+.profile__container button {
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  background: rgba(255, 68, 0, 0.76);
+  border: 1px solid rgba(122, 122, 122, 0.267);
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+.profile__container {
+  display: grid;
+  grid-template-columns: 0fr 4fr 0fr;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.profile__container input {
+  max-width: 350px;
+  margin-right: 5px;
+}
+.icon {
+  border: 1.5px solid rgba(255, 68, 0, 0.76);
+  border-radius: 50%;
+  font-size: 35px;
+  margin-right: 5px;
+  color: rgba(255, 68, 0, 0.76);
+}
+.icon:hover {
+  color: #f7f7f7;
+  background-color: rgba(255, 68, 0, 0.76);
+  border: none;
+}
+.bottom__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom__button button:hover {
+  color: #f7f7f7;
+  background-color: rgba(255, 68, 0, 0.76);
+  cursor: pointer;
+}
+.bottom__button button:disabled,
+.bottom__button button[disabled]{
+  color: #66666647;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+.bottom__button p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+.filesbutton {
+  position: relative;
+  background-color: rgba(255, 68, 0, 0.719);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #f7f7f7;
+  font-size: 20px;
+  padding: 6px 10px 6px 10px;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.filesbutton p {
+  font-size: 0.9rem;
+}
+.filesbutton:hover {
+  background-color: transparent;
+  border: 1px solid rgba(255, 68, 0, 0.719);
+  color: rgba(255, 68, 0, 0.719);
+  font-weight: bold;
+  cursor:pointer;
+}
+.custom {
+  position: relative;
+}
+
+.customcontrol {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 68, 0, 0.719);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #f7f7f7;
+  font-size: 0.8rem;
+  cursor: default;
+  outline: none;
+  padding: 8px 40px 8px 10px;
+  transition: all 200ms ease;
+  max-width: fit-content;
+}
+.custommenu {
+  background-color: transparent; /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    180deg,
+    rgba(165, 1, 1, 0.719),
+    rgba(255, 68, 0, 0.719)
+  );
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: 1px;
+  z-index: -1;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+  color: #f7f7f7;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.customarrow {
+  border-color: rgb(255, 255, 255) transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: " ";
+  display: block;
+  height: 0;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
+.custombase {
+  box-sizing: border-box;
+  color: rgba(51, 51, 51, 0.8);
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.custombase:last-child {
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.custombase:hover {
+  background-color: #f2f9fc;
+  color: #333;
+}
+
+.custombase.is-selected {
+  background-color: #f2f9fc;
+  color: #333;
+}
+.profile__container select {
+  position: relative;
+  background-color: rgba(255, 68, 0, 0.719);
+  border-radius: 6px;
+  border-color: transparent;
+  color: #f7f7f7;
+  font-size: 0.8rem;
+  padding: 8px 8px 8px 8px;
+}
+.profile__container select:active,
+.profile__container select:focus,
+.profile__container select:last-child {
+  border-color: transparent;
+  cursor: pointer;
+}
+.profile__container select::after{
+  border: 2px solid red;
+}
+.profile__container option{
+  font-size: 0.9rem;
+}
+
+.profile__image {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 5px;
+}
+.selected_file{
+  display: flex;
+  position: relative;
+  height: 250px;
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.cross_button{
+  position: absolute;
+  color: white;
+  right: 0;
+  font-size: 25px;
+  margin-right: 2.2px;
+}
+.cross_button:hover{
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 27px;
+}
+
+
+@media (max-width: 600px) {
+  .profile__container select option {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+  .profile__container input {
+    margin-right: 5px;
+    max-width: 300px;
+  }
+  .selected_file{
+    height: 200px;
+  }
+}

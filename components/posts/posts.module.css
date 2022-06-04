@@ -77,6 +77,11 @@
   border-radius: 0.2rem;
   position: relative;
 }
+.post__image2 {
+  position: relative;
+  border: 2px solid red;
+  height: 5rem;
+}
 .readTime {
   background-color: rgb(0, 0, 0); /* Fallback color */
   color: white;

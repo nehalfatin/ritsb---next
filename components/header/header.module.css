@@ -40,13 +40,16 @@
 .image__bg {
   position: absolute;
   z-index: -1;
+  height: 35px;
+  width: 35px;
   top: 0.5rem;
   left: -50%;
   right: -50%;
+  margin-left: 15px;
 }
 
 .iconcontainer {
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   margin-top: 0.85rem;
 }
 

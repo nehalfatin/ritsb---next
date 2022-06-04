@@ -4,6 +4,7 @@ import {ImEye} from 'react-icons/im'
 import {FaPlus} from 'react-icons/fa'
 import Link from 'next/link'
 import Image from 'next/image'
+import ReactPlayer from 'react-player/lazy';
 
 export default function Posts(props) {
     
@@ -27,13 +28,17 @@ export default function Posts(props) {
       </div>
 
       <div className={styles.post__image}>
-        <Image src={props.postImage} layout='responsive' width='100%' height='60%' objectFit='contain'/>
+        {props.postImage && (
+          <Image src={props.postImage} layout='responsive' width='100%' height='60%' objectFit='contain'/>
+        )}
+        {props.subtitle && (
         <p className={styles.readTime}>{`Reading Time: ${props.readingTime}min`}</p>
+        )}
       </div>
       </a>
       </Link>
 
-
+      <ReactPlayer url={props.video} width='100%' height='100%' playing={false} controls={true}/>
       <div className={styles.postbuttons}>
         <div className={styles.postbutton}>
           <AiFillLike className={styles.buttonicons}/>
